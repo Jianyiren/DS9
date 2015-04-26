@@ -7,7 +7,7 @@ Message<-function(Income,Rent,Clothing,Transportation,Social,Books,Others){
   }else{
     return("Good")
   }
- }
+}
 
 shinyServer(
   function(input, output) {
@@ -16,7 +16,7 @@ shinyServer(
     
     output$message <- renderText({
       if (input$Income>input$Rent+input$Clothing+input$Transportation+input$Social+input$Books+input$Others ) "Good"
-      else if (10*input$Income<input$Rent+input$Clothing+input$Transportation+input$Social+input$Books+input$Others) "You know how to make money, so start cutting trees so that you can find a diamond mine one day ;)"
+      else if (10*input$Income<input$Rent+input$Clothing+input$Transportation+input$Social+input$Books+input$Others) "You know how to spend money, so start cutting trees so that you can find a diamond mine one day ;)"
       else "Overdrawn, please rebudget"
     })
     

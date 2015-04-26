@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monthly Budget Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Monthly Budget Calculator">
+  <meta name="author" content="Jianyi">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Monthly Budget Calculator</h1>
+    <h2>Developing Data Products Assignment</h2>
+    <p>Jianyi<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Requirement: Your Shiny Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>1.Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.</p>
+
+<p>2.Deploy the application on Rstudio&#39;s shiny server. Share the application link by pasting it into the text box below. </p>
+
+<p>3.Share your server.R and ui.R code on github</p>
+
+<p>The application must include the following:</p>
+
+<p>Some form of input (widget: textbox, radio button, checkbox, ...)
+Some operation on the ui input in sever.R
+Some reactive output displayed as a result of server calculations
+You must also include enough documentation so that a novice user could use your application.
+The documentation should be at the Shiny website itself. Do not post to an external link.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>My Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is a Calculator to help you calculate whether your monthly budget exceeds your monthly income.Please type your expecetd expenses below on the left and hit submit, the evaluation will be shown on the right.</p>
+
+<p>The input are monthly total income, as well as the expenses of different catorogies, including Rent,Clothing,Transportation,Social,Books,Others</p>
+
+<p>The output are the sum of all expenses, and the evaluation whether the expenses exceeds the total income</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Application-Link and Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>E.g if the monthly total income is 2000, yet the expensef for Rent,Clothing,Transportation,Social,Books,Others are 1000, 200, 50, 50, 50, 100000, then the outout would be</p>
+
+<pre><code class="r">income=2000
+expense=1000+200+50+50+50+100000
+</code></pre>
+
+<p>and when compared with the total income, it will gives you the evaluation and comment</p>
+
+<pre><code class="r"> print(
+      if (income&gt;expense) &quot;Good&quot;
+      else if (10*income&lt;expense) &quot;You know how to spend money, so start cutting trees so that you can find a diamond mine one day ;)&quot;
+      else &quot;Overdrawn, please rebudget&quot;)
+</code></pre>
+
+<pre><code>## [1] &quot;You know how to spend money, so start cutting trees so that you can find a diamond mine one day ;)&quot;
+</code></pre>
+
+<p>(Sorry, I am basically laughing at you spend too much)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Application-Link and Code</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Useful files in repo:</p>
+
+<p>Try out the application on the RStudio shinyapps.io website:<br>
+<a href="https://jianyiren.shinyapps.io/MonthlyBudgetCalculator/">https://jianyiren.shinyapps.io/MonthlyBudgetCalculator/</a></p>
+
+<p>To see the code for the application, visit github website: Github:<a href="https://github.com/Jianyiren/DS9">https://github.com/Jianyiren/DS9</a></p>
+
+<p>Useful files in repo: server.R; ui.R</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Requirement: Your Shiny Application'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='My Application'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application-Link and Code'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Application-Link and Code'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
